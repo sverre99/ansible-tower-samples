@@ -2,7 +2,7 @@
   hosts: all
   tasks:
     - name: Run command
-      command: "ls -la / && touch /tmp/stuff-from-daniel"
+      command: /bin/bash -c "ls -la / > /tmp/stuff-from-daniel"
       register: hello
       
     - debug: msg="{{ hello.stdout }}"
