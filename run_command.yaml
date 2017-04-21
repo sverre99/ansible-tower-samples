@@ -3,5 +3,6 @@
   tasks:
     - name: Run command
       command: "ls -la /"
-      register hello
+      register: hello
+      
     - debug: msg="{{ hello.stdout }}"
