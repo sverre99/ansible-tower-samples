@@ -1,0 +1,5 @@
+- name: Run command
+  hosts: all
+  tasks:
+    - name: Run command
+      command: "echo Running command"
