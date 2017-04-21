@@ -2,4 +2,6 @@
   hosts: all
   tasks:
     - name: Run command
-      command: "echo Running command"
+      command: "ls -la /"
+      register hello
+    - debug: msg="{{ hello.stdout }}"
